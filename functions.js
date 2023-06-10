@@ -163,16 +163,25 @@ function desencryptDark() {
         }
 
     if (onlyContainsLowercase(input.value)) {
-        let desencriptedText = input.value.replace(/[a-z]/g, c => chars[c]);
-        document.getElementById("not-found").style.display = "none";
-        document.getElementById("result").style.display = "block";
-        output.textContent = desencriptedText;
-    } else {
-        alert("Recuerda, sólo letras minúsculas y sin acentos");
+            let desencriptedText = input.value.replace(/ai|enter|imes|ober|ufat/g, c => {
+                for (const key in chars) {
+                    if (chars[key] === c) {
+                        return key;
+                    }
+                }
+                return '';
+            });
+    
+            // Mostrar el resultado en la página
+            document.getElementById("not-found").style.display = "none";
+            document.getElementById("result").style.display = "block";
+            output.textContent = desencriptedText;
+        } else {
+            alert("Recuerda, sólo letras minúsculas y sin acentos");
+        }
+    
+        document.getElementById("paste").style.display = "none";
     }
-
-    document.getElementById("paste").style.display = "none";
-}
 
 function copy() {
     let copyText = output.innerText;
