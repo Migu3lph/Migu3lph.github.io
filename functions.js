@@ -8,36 +8,15 @@ function onlyContainsLowercase(str) {
 
 function encrypt() {
     const chars = {
-        e: "bunga",
-        i: "unga",
-        a: "wryy",
-        o: "xd",
-        u: "uunga",
-        b: "sunga",
-        c: "yu",
-        d: "jk",
-        f: "cv",
-        g: "qo",
-        h: "zp",
-        j: "eb",
-        k: "sa",
-        l: "fg",
-        m: "hi",
-        n: "tl",
-        p: "ux",
-        q: "vd",
-        r: "an",
-        s: "mo",
-        t: "qz",
-        v: "ce",
-        w: "ib",
-        x: "pl",
-        y: "ds",
-        z: "fh",       
+        "a": "ai",
+        "e": "enter",
+        "i": "imes",
+        "o": "ober",
+        "u": "ufat"        
     }
 
     if (onlyContainsLowercase(input.value)) {
-        let encriptedText = input.value.replace(/[a-z]/g, c => chars[c]);
+        let encriptedText = input.value.replace(/[aeiou]/g, c => chars[c]);
         document.getElementById("not-found").style.display = "none";
         document.getElementById("result").style.display = "block";
         output.textContent = encriptedText;
@@ -50,36 +29,15 @@ function encrypt() {
 
 function encryptDark() {
     const chars = {
-        e: "bunga",
-        i: "unga",
-        a: "wryy",
-        o: "xd",
-        u: "uunga",
-        b: "sunga",
-        c: "yu",
-        d: "jk",
-        f: "cv",
-        g: "qo",
-        h: "zp",
-        j: "eb",
-        k: "sa",
-        l: "fg",
-        m: "hi",
-        n: "tl",
-        p: "ux",
-        q: "vd",
-        r: "an",
-        s: "mo",
-        t: "qz",
-        v: "ce",
-        w: "ib",
-        x: "pl",
-        y: "ds",
-        z: "fh",
+        "a": "ai",
+        "e": "enter",
+        "i": "imes",
+        "o": "ober",
+        "u": "ufat"        
     }
 
     if (onlyContainsLowercase(input.value)) {
-        let encriptedText = input.value.replace(/[a-z]/g, c => chars[c]);
+        let encriptedText = input.value.replace(/[aeiou]/g, c => chars[c]);
         document.getElementById("not-found").style.display = "none";
         document.getElementById("result").style.display = "block";
         output.textContent = encriptedText;
@@ -92,33 +50,12 @@ function encryptDark() {
 
 function desencrypt() {
     const chars = {
-        e: "bunga",
-        i: "unga",
-        a: "wryy",
-        o: "xd",
-        u: "uunga",
-        b: "sunga",
-        c: "yu",
-        d: "jk",
-        f: "cv",
-        g: "qo",
-        h: "zp",
-        j: "eb",
-        k: "sa",
-        l: "fg",
-        m: "hi",
-        n: "tl",
-        p: "ux",
-        q: "vd",
-        r: "an",
-        s: "mo",
-        t: "qz",
-        v: "ce",
-        w: "ib",
-        x: "pl",
-        y: "ds",
-        z: "fh",
-        }
+        "ai": "a",
+        "enter": "e",
+        "imes": "i",
+        "ober": "o",
+        "ufat": "u"
+    }
 
     if (onlyContainsLowercase(input.value)) {
         let desencriptedText = input.value.replace(/ai|enter|imes|ober|ufat/g, c => chars[c]);
@@ -134,54 +71,24 @@ function desencrypt() {
 
 function desencryptDark() {
     const chars = {
-        e: "bunga",
-        i: "unga",
-        a: "wryy",
-        o: "xd",
-        u: "uunga",
-        b: "sunga",
-        c: "yu",
-        d: "jk",
-        f: "cv",
-        g: "qo",
-        h: "zp",
-        j: "eb",
-        k: "sa",
-        l: "fg",
-        m: "hi",
-        n: "tl",
-        p: "ux",
-        q: "vd",
-        r: "an",
-        s: "mo",
-        t: "qz",
-        v: "ce",
-        w: "ib",
-        x: "pl",
-        y: "ds",
-        z: "fh",
-        }
+        "ai": "a",
+        "enter": "e",
+        "imes": "i",
+        "ober": "o",
+        "ufat": "u"
+    }
 
     if (onlyContainsLowercase(input.value)) {
-            let desencriptedText = input.value.replace(/ai|enter|imes|ober|ufat/g, c => {
-                for (const key in chars) {
-                    if (chars[key] === c) {
-                        return key;
-                    }
-                }
-                return '';
-            });
-    
-            // Mostrar el resultado en la página
-            document.getElementById("not-found").style.display = "none";
-            document.getElementById("result").style.display = "block";
-            output.textContent = desencriptedText;
-        } else {
-            alert("Recuerda, sólo letras minúsculas y sin acentos");
-        }
-    
-        document.getElementById("paste").style.display = "none";
+        let desencriptedText = input.value.replace(/ai|enter|imes|ober|ufat/g, c => chars[c]);
+        document.getElementById("not-found").style.display = "none";
+        document.getElementById("result").style.display = "block";
+        output.textContent = desencriptedText;
+    } else {
+        alert("Recuerda, sólo letras minúsculas y sin acentos");
     }
+
+    document.getElementById("paste").style.display = "none";
+}
 
 function copy() {
     let copyText = output.innerText;
