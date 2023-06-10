@@ -37,7 +37,7 @@ function encrypt() {
     }
 
     if (onlyContainsLowercase(input.value)) {
-        let encriptedText = input.value.replace(/[aeiou]/g, c => chars[c]);
+        let encriptedText = input.value.replace(/[a-z]/g, c => chars[c]);
         document.getElementById("not-found").style.display = "none";
         document.getElementById("result").style.display = "block";
         output.textContent = encriptedText;
@@ -79,7 +79,7 @@ function encryptDark() {
     }
 
     if (onlyContainsLowercase(input.value)) {
-        let encriptedText = input.value.replace(/[aeiou]/g, c => chars[c]);
+        let encriptedText = input.value.replace(/[a-z]/g, c => chars[c]);
         document.getElementById("not-found").style.display = "none";
         document.getElementById("result").style.display = "block";
         output.textContent = encriptedText;
@@ -163,7 +163,7 @@ function desencryptDark() {
         }
 
     if (onlyContainsLowercase(input.value)) {
-        let desencriptedText = input.value.replace(/[0-9]/g, c => chars[c]);
+        let desencriptedText = input.value.replace(/[a-z]/g, c => chars[c]);
         document.getElementById("not-found").style.display = "none";
         document.getElementById("result").style.display = "block";
         output.textContent = desencriptedText;
