@@ -1,6 +1,23 @@
 const input = document.getElementById("input-text");
 const output = document.getElementById("output-text");
 const button = document.querySelectorAll("button");
+const btnicon = document.getElementById('btnicon');
+const iconImage = document.getElementById('iconImage');
+const modeText = document.getElementById('modeText');
+const dollImage = document.getElementById('dollImage');
+  
+btnicon.addEventListener('click', () => {
+    if (iconImage.src.endsWith('light_dark2.gif')) {
+        iconImage.src = 'images/light_dark.gif';
+        modeText.textContent = 'Light Mode';
+        dollImage.src = 'images/girl2.gif'; // Cambio de imagen a girl.gif
+    } else {
+        iconImage.src = 'images/light_dark2.gif';
+        modeText.textContent = 'Dark Mode';
+        dollImage.src = 'images/girl.gif'; // Cambio de imagen a girl2.gif
+    }
+    document.body.classList.toggle('dark');
+});
 
 function onlyContainsLowercase(str) {
     return /^[a-z0-9/ /ñ:;,.¿?¡!]+$/.test(str);

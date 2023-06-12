@@ -17,12 +17,15 @@
         <header>
             
           <div class="container_ico" >
-            <a href="index_Dark.html"><img src="images/alura.gif" alt="logo Alura" width="100" height="50" ></a>
+            <img src="images/alura.gif" alt="logo Alura" width="100" height="50">
+           
             <div class="icon">
-                <a href="index_Dark.html"><img src="images/light_dark2.gif" alt="logo Alura" width="100" height="100"></a>
-                <p>Dark Mode</p>
+                <button id="btnicon" class="icon" style="border: none; background: transparent; padding: 0;">
+                  <img id="iconImage" src="images/light_dark2.gif" alt="logo Alura" width="100" height="100">
+                </button>
+                <p id="modeText">Dark Mode</p>
               </div>
-              </a>
+              
             
           </div>
         </header>
@@ -39,7 +42,7 @@
             </section>
             <section class="output">
                 <div class="output__not-found" id="not-found">
-                    <img class="output__not-found__doll" src="images/girl.gif" alt="imagen anime solitaria deprimida y sin encontrar respuestas">
+                    <img id="dollImage" class="output__not-found__doll" src="images/girl.gif" alt="imagen anime solitaria deprimida y sin encontrar respuestas">
                     <div class="output__not-found__text-box">
                         <p>Ningún mensaje fue encontrado</p>
                         <p>Ingresa el texto que desees encriptar o desencriptar.</p>
